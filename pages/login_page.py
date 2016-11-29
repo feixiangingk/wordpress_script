@@ -4,7 +4,7 @@ from pages.dashboard_page import DashBoard_Page
 class Login_page(BasePage):
 	"""docstring for LoginPage"""
 
-	url="http://172.29.20.19/wordpress/wp-admin/"
+	url="http://172.29.20.57/wordpress/wp-admin/"
 
 	@property
 	def username_textfield(self):
@@ -21,7 +21,7 @@ class Login_page(BasePage):
 
 	@property
 	def error_textfield(self):
-		return self.by_id("login_error")
+		return self.by_css("#login_error")
 
 
 	def login(self,username,pwd):

@@ -1,6 +1,6 @@
 #coding:utf-8
 from selenium import webdriver
-import time,unittest,HTMLTestRunner,argparse
+import time,unittest,HTMLTestRunner,argparse,os
 from pages.login_page import Login_page
 global browser_type
 
@@ -49,7 +49,7 @@ class Login_case(unittest.TestCase):
 		title=dashboard_page.title()
 		
 
-		self.assertIn(u"UFO_team需求整理博客", title)
+		self.assertIn(u"仪表盘 ‹ UFO_team需求整理博客 — WordPress", title)
 
 	def test_login_username_Null(self):
 		username=""
@@ -100,8 +100,7 @@ if __name__ == '__main__':
 
 
 	#添加整个测试文件py
-	try:
-		testsuite.addTest(unittest.makeSuite(Login_case))
+	testsuite.addTest(unittest.makeSuite(Login_case))
 	
 	
 
@@ -113,10 +112,11 @@ if __name__ == '__main__':
 
 
 	#使用HTMLTestRunner库生成测试报告
-		filename="D:\\quarkscript\\wordpress_script\\report.html"
-		fp=file(filename,'wb')
-		runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title="wordpress_report")
-		runner.run(testsuite)
-	except Exception, e:
-		raise e
+	path=os.getcwd()
+	print path
+	filename = path + "\\wordpress_report.html"
+	print filename
+	fp=file(filename,'wb')
+	runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title="wordpress_report")
+	runner.run(testsuite)
 

@@ -8,7 +8,7 @@ class BasePage(object):
 	"""docstring for BasePage"""
 	def __init__(self, driver):
 		self.driver=driver
-		self.domain="http://172.29.20.19/wordpress/wp-admin/"
+		self.domain="http://172.29.20.57/wordpress/wp-admin/"
 
 	def title(self):
 		return self.driver.title
