@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>wordpress_report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2016-11-29 11:04:26</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00</p>
-<p class='attribute'><strong>Status:</strong> Error 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2016-11-29 11:14:27</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:23.241000</p>
+<p class='attribute'><strong>Status:</strong> Pass 1 Error 1</p>
 
 <p class='description'></p>
 </div>
@@ -224,38 +224,15 @@ function showOutput(id, name) {
 <tr class='errorClass'>
     <td>Login_case: docstring for Login_case</td>
     <td>2</td>
+    <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td>2</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_login_success</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        error</a>
-
-    <div id='div_ft1.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.1: Traceback (most recent call last):
-  File "login.py", line 22, in setUp
-    self.driver==webdriver.Firefox()
-AttributeError: 'Login_case' object has no attribute 'driver'
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_success</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='ft1.2' class='none'>
@@ -274,9 +251,22 @@ AttributeError: 'Login_case' object has no attribute 'driver'
         <pre>
         
 ft1.2: Traceback (most recent call last):
-  File "login.py", line 22, in setUp
-    self.driver==webdriver.Firefox()
-AttributeError: 'Login_case' object has no attribute 'driver'
+  File "login.py", line 61, in test_login_username_Null
+    error=login_page.error_textfield.text
+  File "D:\Program Files (x86)\Jenkins\workspace\wordpress_script\pages\login_page.py", line 24, in error_textfield
+    return self.by_id("login_error")
+  File "D:\Program Files (x86)\Jenkins\workspace\wordpress_script\pages\base_page.py", line 25, in by_id
+    return self.driver.find_element_by_id(the_id)
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 266, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 744, in find_element
+    {'using': by, 'value': value})['value']
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 233, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: Unable to find element with id == login_error
+
 
 
         </pre>
@@ -289,9 +279,9 @@ AttributeError: 'Login_case' object has no attribute 'driver'
 <tr id='total_row'>
     <td>Total</td>
     <td>2</td>
+    <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td>2</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>

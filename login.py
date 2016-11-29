@@ -100,7 +100,10 @@ if __name__ == '__main__':
 
 
 	#添加整个测试文件py
-	testsuite.addTest(unittest.makeSuite(Login_case))
+	try:
+		testsuite.addTest(unittest.makeSuite(Login_case))
+	
+	
 
 
 	#2调试
@@ -110,8 +113,10 @@ if __name__ == '__main__':
 
 
 	#使用HTMLTestRunner库生成测试报告
-	filename="D:\\quarkscript\\wordpress_script\\report.html"
-	fp=file(filename,'wb')
-	runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title="wordpress_report")
-	runner.run(testsuite)
+		filename="D:\\quarkscript\\wordpress_script\\report.html"
+		fp=file(filename,'wb')
+		runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title="wordpress_report")
+		runner.run(testsuite)
+	except Exception, e:
+		raise e
 
