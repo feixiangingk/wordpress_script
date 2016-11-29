@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>wordpress_report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2016-11-29 08:46:39</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:10.451000</p>
-<p class='attribute'><strong>Status:</strong> Pass 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2016-11-29 11:04:26</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00</p>
+<p class='attribute'><strong>Status:</strong> Error 2</p>
 
 <p class='description'></p>
 </div>
@@ -221,31 +221,77 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>Login_case: docstring for Login_case</td>
     <td>2</td>
+    <td>0</td>
+    <td>0</td>
     <td>2</td>
-    <td>0</td>
-    <td>0</td>
     <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login_success</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_login_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: Traceback (most recent call last):
+  File "login.py", line 22, in setUp
+    self.driver==webdriver.Firefox()
+AttributeError: 'Login_case' object has no attribute 'driver'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login_username_Null</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_login_username_Null</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        error</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: Traceback (most recent call last):
+  File "login.py", line 22, in setUp
+    self.driver==webdriver.Firefox()
+AttributeError: 'Login_case' object has no attribute 'driver'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
     <td>2</td>
+    <td>0</td>
+    <td>0</td>
     <td>2</td>
-    <td>0</td>
-    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>
