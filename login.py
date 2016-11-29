@@ -19,7 +19,7 @@ class Login_case(unittest.TestCase):
 			self.driver=webdriver.Chrome()
 
 		elif browser_type == 3:
-			self.driver==webdriver.Firefox()
+			self.driver=webdriver.Firefox()
 
 		self.driver.implicitly_wait(8)
 
@@ -104,14 +104,14 @@ if __name__ == '__main__':
 
 
 	#2调试
-	runner=unittest.TextTestRunner()
-	runner.run(testsuite)
+	# runner=unittest.TextTestRunner()
+	# runner.run(testsuite)
 	
 
 
 	#使用HTMLTestRunner库生成测试报告
-	# filename="D:\\quarkscript\\wordpress_script\\report.html"
-	# fp=file(filename,'wb')
-	# runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title="wordpress_report")
-	# runner.run(testsuite)
+	filename="D:\\quarkscript\\wordpress_script\\report.html"
+	fp=file(filename,'wb')
+	runner=HTMLTestRunner.HTMLTestRunner(stream=fp,title="wordpress_report")
+	runner.run(testsuite)
 
